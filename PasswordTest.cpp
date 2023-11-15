@@ -56,15 +56,10 @@ TEST(PasswordTest, singlecase_in_password) // sad test case
 	ASSERT_EQ(false, actual);
 }
 
-TEST(PasswordTest, set_password)
-{
-	Password my_password;
-	my_password.set("Rsakao021356");
-}
-
 TEST(PasswordTest, auth_password)
 {
 	Password my_password;
+	my_password.set("Rsakao021356");
 	bool actual = my_password.authenticate("Rsakao021356");
 	ASSERT_EQ(true, actual);
 }
